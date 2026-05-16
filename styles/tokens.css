@@ -1,0 +1,111 @@
+/* tokens.css — Nedžad Avdić portfolio design tokens
+   Place at: public/styles/tokens.css
+   Import in Layout.astro <head>: <link rel="stylesheet" href="/styles/tokens.css" />
+*/
+
+/* ─── Google Fonts ─────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap');
+
+/* ─── Base reset ────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ─── Light mode tokens ─────────────────────────────────── */
+:root {
+  --color-bg:           #f7f6f2;
+  --color-bg2:          #efede8;
+  --color-bg3:          #e8e5df;
+  --color-card:         #ffffff;
+
+  --color-text:         #1c1b18;
+  --color-muted:        #7a776e;
+  --color-hint:         #b0ada5;
+
+  --color-border:       #dddad3;
+  --color-border2:      #c9c5bc;
+
+  --color-avail-bg:     #e8f5ee;
+  --color-avail-text:   #1a5c35;
+  --color-avail-border: #b6dfc8;
+  --color-avail-dot:    #2d9e5f;
+
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-sans:    'DM Sans', system-ui, sans-serif;
+
+  --radius-sm:   6px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-pill: 99px;
+}
+
+/* ─── Dark mode tokens ──────────────────────────────────── */
+[data-theme="dark"] {
+  --color-bg:           #141412;
+  --color-bg2:          #1c1b18;
+  --color-bg3:          #242320;
+  --color-card:         #1c1b18;
+
+  --color-text:         #f0ede6;
+  --color-muted:        #8a8880;
+  --color-hint:         #5a5854;
+
+  --color-border:       #2e2d29;
+  --color-border2:      #3d3c37;
+
+  --color-avail-bg:     #0f2e1e;
+  --color-avail-text:   #6fcf97;
+  --color-avail-border: #1a5c35;
+  --color-avail-dot:    #2d9e5f;
+}
+
+/* ─── Base styles ───────────────────────────────────────── */
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  transition: background 0.25s, color 0.25s;
+}
+
+/* ─── Layout ────────────────────────────────────────────── */
+.site {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.divider {
+  border: none;
+  border-top: 0.5px solid var(--color-border);
+}
+
+.section-label {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 28px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

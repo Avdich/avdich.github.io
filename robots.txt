@@ -1,0 +1,7 @@
+# robots.txt
+# Place this file in /public/robots.txt
+
+User-agent: *
+Allow: /
+
+Sitemap: https://avdich.github.io/sitemap-index.xml
